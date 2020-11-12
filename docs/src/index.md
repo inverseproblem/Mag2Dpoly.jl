@@ -10,9 +10,9 @@ Depth = 4
 
 ## User guide
 
-**MagAnom.jl** *is a Julia version package conceived for forward magnetic anomaly calculation due to two-dimensional polygonal bodies with uniform arbitrary polarization*. 
+**Mag2Dpoly** *is a Julia package conceived for forward magnetic anomaly calculation due to two-dimensional polygonal bodies with uniform arbitrary polarization*. 
 
-The formulations implemented in this package are that of Talwani & Heirtzler (1962, 1964), Won & Bevis (1987) and Kravchinsky et al. (2019).
+The formulations implemented in this package are that of Talwani & Heirtzler (1962, 1964), Won & Bevis (1987) and revised Kravchinsky et al. (2019).
 
 If you use this code for research or else, please cite the related paper:
 
@@ -32,7 +32,7 @@ Author = "Alessandro Ghirotto"
 To install the package simple enter into the package manager mode in Julia by typing "`]`" at the 
 REPL prompt and then use `add`, i.e.,
 ```
-(v1.5) pkg> add MagAnom
+(v1.5) pkg> add Mag2Dpoly
 ```
 The package will be automatically downloaded from the web and installed.
 
@@ -41,25 +41,25 @@ The package will be automatically downloaded from the web and installed.
     to install it run the following in package mode:
 		
     ```julia
-    (v1.5) pkg> add https://github.com/inverseproblem/MagAnom.jl
+    (v1.5) pkg> add https://github.com/inverseproblem/Mag2Dpoly.jl
     ```
 	
 Alternatively, use the path where the directory of the package is located, be it local or remote (Github):
 ```
-(v1.5) pkg> add /path/to/MagAnom.jl
+(v1.5) pkg> add /path/to/Mag2Dpoly.jl
 ```
 
 ### Theoretical Background
 
 For a theoretical explanation, let us consider a three-dimensional non-magnetic 
-space in which a body infinitely extended in y direction is immersed. 
+space in which a body infinitely extended in the ``y`` direction is immersed. 
 
 The common aim of all formulations is the calculation of the magnetic field of 
-this body upon an observation point (x0,z0) located along a profile aligned to 
-the x direction (the positive z axis is assumed pointing downward).
+this body upon an observation point ``(x_0,z_0)`` located along a profile aligned to 
+the ``x`` direction (the positive ``z`` axis is assumed pointing downward).
 
 The starting assumption is that our body can be considered as discretized by an 
-infinite number of uniformly-magnetized elementary volumes with infinitesimal dimensions dx, dy, dz.
+infinite number of uniformly-magnetized elementary volumes with infinitesimal dimensions ``dx``, ``dy``, ``dz``.
 
 Within this assumption, the magnetic field associated to the body can be mathematically 
 expressed in terms of a line integral around its periphery, represented in two dimensions 
@@ -69,7 +69,7 @@ as its polygonal cross-section (in red).
 ### Tutorial
 First load the module and define some magnetization vectors,
 ```@example ex1
-using MagAnom 
+using Mag2Dpoly 
 
 # induced magnetization
 Jind = MagnetizVector(mod=4.9,Ideg=90.0,Ddeg=45.0)
@@ -138,7 +138,7 @@ nothing # hide
 
 ## Public API
 ```@docs
-MagAnom
+Mag2Dpoly
 ```
 
 ### Data structures
@@ -170,24 +170,26 @@ tmagpoly2D
 tmagpoly2Dgen
 ```
 #### Forward algorithms alone
-```@docs
-MagAnom.tmagtalwani
-MagAnom.tmagtalwanired
-MagAnom.tmagkrav
-MagAnom.tmagwonbev
-```
-
 !!! note
     These functions are not exported. To call them 
-    type `MagAnom.` before the name of the functions.
- 
-### Useful functions
+    type `Mag2Dpoly.` before the name of the functions.
+	
 ```@docs
-MagAnom.convert_H_to_B_nT
-MagAnom.convert_B_nT_to_H
-MagAnom.magcomp
+Mag2Dpoly.tmagtalwani
+Mag2Dpoly.tmagtalwanired
+Mag2Dpoly.tmagkrav
+Mag2Dpoly.tmagwonbev
 ```
 
+ 
+### Useful functions
 !!! note
     These functions are not exported. To call them
-    type `MagAnom.` before the name of the functions.
+    type `Mag2Dpoly.` before the name of the functions.
+	
+```@docs
+Mag2Dpoly.convert_H_to_B_nT
+Mag2Dpoly.convert_B_nT_to_H
+Mag2Dpoly.magcomp
+Mag2Dpoly.checkanticlockwiseorder
+```

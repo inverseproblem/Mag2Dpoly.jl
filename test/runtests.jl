@@ -17,7 +17,7 @@
 
 
 using Test
-using MagAnom
+using Mag2Dpoly
 
 ########################################
 

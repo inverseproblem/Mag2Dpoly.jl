@@ -2,3 +2,15 @@ name = "Mag2Dpoly"
 uuid = "b06d3d71-57d9-4529-ad43-0c70ed584ae8"
 authors = ["Andrea Zunino <inverseproblem@users.noreply.github.com>"]
 version = "0.1.0"
+
+[deps]
+DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
