@@ -6,7 +6,7 @@
 $(TYPEDSIGNATURES)
 
 Total magnetic field (2D) for a set of polygonal bodies defined by their corners. Takes into account both induced and remnant magnetization.
- Based on Talwani & Heitzler (1964), the default algorithm in MagAnom. 
+ Based on Talwani & Heitzler (1964), the default algorithm in Mag2Dpoly package. 
 """
 function tmagpolybodies2D(xzobs::Array{<:Real,2},Jind::Vector{MagnetizVector},Jrem::Vector{MagnetizVector},
                     northxax::Real,bodies::MagPolygBodies2D)
@@ -146,7 +146,7 @@ end
 $(TYPEDSIGNATURES)
 
 Total magnetic field (2D) for a polygon defined by its corners. Takes into account both induced and remnant magnetization.
- Based on Talwani & Heitzler (1964), the default algorithm in MagAnom. 
+ Based on Talwani & Heitzler (1964), the default algorithm in Mag2Dpoly package. 
 """
 function tmagpoly2D(xzobs::Array{<:Real,2},Jind::MagnetizVector,Jrem::MagnetizVector,
                     northxax::Real,body::BodySegments2D)
