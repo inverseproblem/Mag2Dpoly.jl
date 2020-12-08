@@ -289,7 +289,7 @@ function tmagtalwani(x1::Real,z1::Real,x2::Real,z2::Real,
     z21 = z2-z1
     s = sqrt(x21^2+z21^2)
     
-    # Error and return if two corners are too close
+    # Return 0 if two corners are too close
     if s < small
         return 0.0
     end
@@ -309,9 +309,8 @@ function tmagtalwani(x1::Real,z1::Real,x2::Real,z2::Real,
 
     ϕ = acot(g) 
 
-    # In the case polygon sides cross the x axis
     θdiff = θ2-θ1
-    
+    # In the case polygon sides cross the x axis    
     if θdiff < -π
         θdiff = θdiff + 2.0*π
     elseif θdiff > π
@@ -380,7 +379,7 @@ function tmagkrav(x1::Real,z1::Real,x2::Real,z2::Real,
     z21 = z2-z1
     tmpγ = sqrt(x21^2+z21^2)
 
-    # Error and return if two corners are too close
+    # Return 0 if two corners are too close
     if tmpγ < small
         return 0.0
     end
@@ -486,7 +485,7 @@ function tmagtalwanired(x1::Real,z1::Real,x2::Real,z2::Real,
     z21 = z2-z1
     s = sqrt(x21^2+z21^2)
     
-    # Error and return if two corners are too close
+    # Return 0 if two corners are too close
     if s < small
         return 0.0
     end
@@ -604,7 +603,7 @@ function tmagwonbev(x1::Real,z1::Real,x2::Real,z2::Real,
     z21 = z2-z1
     R = sqrt(x21^2+z21^2)
 
-    # Error and return if two corners are too close
+    # Return 0 if two corners are too close
     if R < small
         return 0.0
     end
