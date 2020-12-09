@@ -14,7 +14,7 @@ function tmagpolybodies2D(xzobs::Array{<:Real,2},Jinds::Vector{MagnetizVector},J
     nbody = length(bodies.bo)
     tmag = zeros(eltype(Jinds[1].mod),size(xzobs,1))
     for i=1:nbody
-        tmag .+= tmagpoly2D(xzobs,Jinds[i],Jrems[i],northxax,bodies[i],forwardtype) 
+        tmag .+= tmagpoly2D(xzobs,Jinds[i],Jrems[i],northxax,bodies.bo[i]) 
     end
     return tmag
 end
