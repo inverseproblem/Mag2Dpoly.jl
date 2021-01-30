@@ -1,5 +1,5 @@
 [![](https://img.shields.io/badge/docs-dev-blue.svg)](https://inverseproblem.github.io/Mag2Dpoly.jl/dev)
-[![CI](https://github.com/inverseproblem/Mag2Dpoly.jl/workflows/CI/badge.svg)
+![CI](https://github.com/inverseproblem/Mag2Dpoly.jl/workflows/CI/badge.svg)
 
 # Mag2Dpoly.jl
 Mag2Dpoly is a Julia package conceived for forward magnetic anomaly calculation due to two-dimensional polygonal bodies with uniform arbitrary polarization.
