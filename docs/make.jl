@@ -4,7 +4,7 @@ using Documenter, Mag2Dpoly
 
 if haskey(ENV, "GITHUB_ACTIONS")
          println("################################################")
-         println("###  if haskey(ENV, "GITHUB_ACTIONS") == true ")
+         println("###  haskey(ENV, GITHUB_ACTIONS) == true ")
          println("################################################")
 end
 
