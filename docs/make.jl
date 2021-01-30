@@ -2,6 +2,12 @@
 
 using Documenter, Mag2Dpoly
 
+if haskey(ENV, "GITHUB_ACTIONS")
+         println("################################################")
+         println("###  if haskey(ENV, "GITHUB_ACTIONS") == true ")
+         println("################################################")
+end
+
 makedocs(sitename="Mag2Dpoly.jl",
          modules = [Mag2Dpoly],
          authors = "Andrea Zunino, Alessandro Ghirotto",
@@ -12,7 +18,6 @@ makedocs(sitename="Mag2Dpoly.jl",
          )
 
 deploydocs(
-    deploy_config=Documenter.GitHubActions(),
     repo="github.com/inverseproblem/Mag2Dpoly.jl.git",
     devbranch = "main",
     branch = "gh-pages" 
