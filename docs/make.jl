@@ -12,6 +12,7 @@ makedocs(sitename="Mag2Dpoly.jl",
          )
 
 deploydocs(
+    deploy_config=Documenter.GitHubActions(),
     repo="github.com/inverseproblem/Mag2Dpoly.jl.git",
     devbranch = "main",
     branch = "gh-pages" 
