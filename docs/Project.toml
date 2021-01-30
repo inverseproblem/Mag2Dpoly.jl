@@ -4,4 +4,4 @@ Mag2Dpoly = "b06d3d71-57d9-4529-ad43-0c70ed584ae8"
 PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
 
 [compat]
-Documenter = "^0.23"
+Documenter = ">=0.26"
