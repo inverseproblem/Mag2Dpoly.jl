@@ -8,6 +8,13 @@ if haskey(ENV, "GITHUB_ACTIONS")
          println("################################################")
 end
 
+adds = Documenter.auto_detect_deploy_system();
+println("################################")
+println("### Auto detect deploy system: ###")
+println("###      $adds             ###")
+println("################################")
+
+
 makedocs(sitename="Mag2Dpoly.jl",
          modules = [Mag2Dpoly],
          authors = "Andrea Zunino, Alessandro Ghirotto",
