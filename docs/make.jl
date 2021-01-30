@@ -2,7 +2,6 @@
 
 using Documenter, Mag2Dpoly
 
-#modules = [EikonalSolvers],
 makedocs(modules = [Mag2Dpoly],
          sitename="Mag2Dpoly.jl",
          authors = "Andrea Zunino, Alessandro Ghirotto",
@@ -14,5 +13,6 @@ makedocs(modules = [Mag2Dpoly],
 
 deploydocs(
     repo="github.com/inverseproblem/Mag2Dpoly.jl.git",
-    devbranch = "main"
+    devbranch = "main",
+    branch = "gh-pages" 
 )
