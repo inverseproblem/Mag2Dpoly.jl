@@ -1,6 +1,6 @@
 
 
-using Documenter, Mag2Dpoly
+using Documenter, Mag2Dpoly, PyPlot
 
 if haskey(ENV, "GITHUB_ACTIONS")
          println("################################################")
