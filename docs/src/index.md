@@ -116,24 +116,22 @@ tmag = tmagpolybodies2Dgen(xzobs,Jinds,Jrems,northxax,pbody,forwardtype)
 ```
 
 Now we can plot the results:
-```@example ex1
-using GRUtils
-xmi=minimum(xzobs[:,1]) 
-xma=maximum(xzobs[:,1])
-subplot(2,1,1)
-plot(xzobs[:,1],tmag,".-") 
-xlim([xmi,xma])
-subplot(2,1,2)
-x = [pbody.bo[1].ver1[:,1]...,pbody.bo[1].ver2[end,1]]
-y = [pbody.bo[1].ver1[:,2]...,pbody.bo[1].ver2[end,2]]
-plot(x,y,"o-")
-xlim([xmi,xma])
-yflip(true)
-savefig("plotex1.svg") # hide
-nothing # hide
-```
-![](plotex1.svg)
 
+    using PyPlot
+    xmi=minimum(xzobs[:,1]) 
+    xma=maximum(xzobs[:,1])
+    figure()
+    subplot(211)
+    plot(xzobs[:,1],tmag,".-") 
+    xlim(xmi,xma)
+    subplot(212)
+    x = [pbody.bo[1].ver1[:,1]...,pbody.bo[1].ver2[end,1]]
+    y = [pbody.bo[1].ver1[:,2]...,pbody.bo[1].ver2[end,2]]
+    plot(x,y,"o-")
+    xlim(xmi,xma)
+    gca().invert_yaxis()
+
+![](images/plotex1.svg)
 
 ## Public API
 ```@docs

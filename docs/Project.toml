@@ -1,6 +1,5 @@
 [deps]
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
-GRUtils = "0337cf30-a0fd-11e9-31db-a79914c9d7ac"
 Mag2Dpoly = "b06d3d71-57d9-4529-ad43-0c70ed584ae8"
 
 [compat]
