@@ -49,7 +49,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
- 
+      - name: Qt5 stuff
+        run: sudo apt-get install qt5-default
+        
       - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@latest
         with:
