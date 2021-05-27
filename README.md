@@ -13,7 +13,5 @@ The specific procedures for each formulation, the analytical/numerical results d
 
 If you use this code for research or else, please cite the related paper:
 
-Ghirotto A., Zunino A., Armadillo E. and Mosegaard K.
-**Magnetic anomalies caused by 2D polygonal structures with uniform arbitrary polarization: new insights from analytical/numerical comparison among available algorithm formulations**,
-GRL, under review.
+Alessandro Ghirotto, Andrea Zunino, Egidio Armadillo & Klaus Mosegaard (2021). **Magnetic Anomalies Caused by 2D Polygonal Structures with Uniform Arbitrary Polarization: new insights from analytical/numerical comparison among available algorithm formulations**. *Geophysical Research Letters, 48*(7), e2020GL091732.
 
