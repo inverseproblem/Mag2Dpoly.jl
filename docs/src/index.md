@@ -16,7 +16,7 @@ The formulations implemented in this package are that of Talwani & Heirtzler (19
 
 If you use this code for research or else, please cite the related paper:
 
-Alessandro Ghirotto, Andrea Zunino, Egidio Armadillo & Klaus Mosegaard (2020). **Magnetic Anomalies Caused by 2D Polygonal Structures with Uniform Arbitrary Polarization: new insights from analytical/numerical comparison among available algorithm formulations**. Submitted to Geophysical Research Letters.
+Alessandro Ghirotto, Andrea Zunino, Egidio Armadillo & Klaus Mosegaard (2021). **Magnetic Anomalies Caused by 2D Polygonal Structures with Uniform Arbitrary Polarization: new insights from analytical/numerical comparison among available algorithm formulations**. *Geophysical Research Letters, 48*(7), e2020GL091732.
 
 The specific procedures for each formulation, the analytical/numerical results derived from their comparison and the rectification made to Kravchinsky et al. (2019) algorithm are describde in detail in the paper above.
 
